@@ -481,6 +481,147 @@ padding: 0px 50px 80px 50px;
 
 
 
+.nosotros-historia {
+  padding: 80px 20px;
+  background-color: #f5f6fb;
+  margin: 80px 0px;
+}
+
+.historia-contenido {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.historia-imagen {
+  flex: 1;
+}
+
+.historia-imagen img {
+  width: 100%;
+  border-radius: 12px;
+}
+.historia-texto {
+  flex: 1;
+  text-align: left;
+}
+
+.historia-titulo {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #1f2a6d;
+  text-align: left;
+}
+
+.historia-descripcion {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+.historia-boton {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #3b5cff;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-size: 14px;
+}
+
+
+.seccion-frase-nosotros{
+  background: white;
+  margin: 150px 0px;
+}
+
+.frase-contenedor-nosotros{
+  max-width: 900px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.frase-imagen-nosotros img{
+  width: 140px;
+}
+
+.frase-texto-nosotros h2{
+  font-size: 42px;
+  font-weight: 700;
+  text-align: center;
+  margin: 0;
+  color: #222;
+}
+
+
+
+
+
+.nosotros-historia-2{
+  padding: 80px 20px;
+  background-color: #f5f6fb;
+  margin: 80px 0px;
+
+}
+
+.historia-contenido-2 {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-direction: row-reverse;
+}
+
+.historia-imagen-2 {
+  flex: 1;
+}
+
+.historia-imagen-2 img {
+  width: 100%;
+  border-radius: 12px;
+}
+.historia-texto-2 {
+  flex: 1;
+  text-align: right;
+}
+
+.historia-titulo-2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #1f2a6d;
+  text-align: right;
+}
+
+.historia-descripcion-2 {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+.historia-boton {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #3b5cff;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-size: 14px;
+}
+
+
+
+
+
 
 
 /*Sección proyectos*/
@@ -700,6 +841,70 @@ background: #ff9f0f;
 
   .frase-imagen img{
     width: 110px;
+  }
+
+}
+
+
+
+
+/*Nosotros*/
+@media (max-width: 500px) {
+
+  .nosotros-historia {
+    padding: 60px 20px;
+  }
+
+  .historia-contenido {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .historia-texto {
+    text-align: center;
+  }
+
+  .historia-titulo {
+    font-size: 28px;
+  }
+
+  .historia-descripcion {
+    font-size: 15px;
+  }
+
+  .historia-boton {
+    margin: 0 auto;
+  }
+
+}
+
+
+@media (max-width: 500px) {
+
+  .nosotros-historia-2 {
+    padding: 60px 20px;
+  }
+
+  .historia-contenido-2 {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .historia-texto-2 {
+    text-align: center;
+  }
+
+  .historia-titulo-2 {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .historia-descripcion-2 {
+    font-size: 15px;
+  }
+
+  .historia-boton {
+    margin: 0 auto;
   }
 
 }
