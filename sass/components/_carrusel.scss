@@ -1,0 +1,11 @@
+@use '../utilities/mixinx' as *;
+@use '../utilities/variables' as *;
+
+
+
+@media (max-width: $mobile) {
+  .carousel-control-prev,
+  .carousel-control-next {
+    display: none;
+  }
+}

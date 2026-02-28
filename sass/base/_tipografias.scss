@@ -1,0 +1,17 @@
+@use '../utilities/mixinx' as *;
+@use '../utilities/variables' as *;
+
+
+
+.title1 {
+  text-align: center;
+  color: orangered;
+  font-family: $fuenteGeneral;
+  padding: 20px;
+}
+
+h2 {
+  text-align: center;
+  color: rgb(69, 49, 172);
+  font-family: $fuenteGeneral;
+}

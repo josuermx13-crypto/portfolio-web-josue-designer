@@ -1,0 +1,19 @@
+/* Mixins */
+@mixin flexBase($align, $justify) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin btnBase($bg, $borde, $texto) {
+  background-color: $bg !important;
+  border: 2px solid $borde !important;
+  color: $texto !important;
+  font-weight: 600;
+}
+
+@mixin textoBase($size, $weight, $align) {
+  font-size: $size;
+  font-weight: $weight;
+  text-align: $align;
+}

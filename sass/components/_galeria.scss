@@ -1,0 +1,45 @@
+@use '../utilities/mixinx' as *;
+@use '../utilities/variables' as *;
+
+
+
+
+.contenedor-mio {
+  padding: 25px 0px 40px 0px;
+}
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  max-width: 1100px;
+  margin: 0 auto;
+
+  > * {
+    overflow: hidden;
+    border-radius: 10px;
+  }
+
+  img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+  }
+
+  img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  }
+}
+
+@media (max-width: $mobile) {
+  .galeria {
+    grid-template-columns: 1fr;
+
+    img {
+      height: 220px;
+    }
+  }
+}

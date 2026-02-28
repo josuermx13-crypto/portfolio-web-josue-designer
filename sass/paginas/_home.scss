@@ -1,0 +1,155 @@
+@use '../utilities/mixinx' as *;
+@use '../utilities/variables' as *;
+
+
+
+/* Hero/Home  */
+.hero {
+  background-color: $colorSeccionHero;
+  min-height: 70vh;
+  @include flexBase(center, center);
+  text-align: center;
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    max-width: 900px;
+
+    .avatar-perfil {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 10px;
+      border: 3px solid $colorBase;
+    }
+
+    .hero-tag {
+      background: $colorTag;
+      color: $colorBase;
+    }
+
+    .hero-title {
+      color: $colorBase;
+      font-size: 42px;
+      line-height: 1.1;
+      margin: 0;
+      font-weight: 800;
+    }
+
+    .hero-subtitle {
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 16px;
+      margin: 0;
+    }
+
+    .hero-btn {
+      @include btnBase($colorBase, $colorBase, $colorTag);
+      margin-top: 10px;
+
+      &:hover {
+        @include btnBase($colorTag, $colorTag, $colorBase);
+      }
+
+      &:focus,
+      &:active {
+        outline: none !important;
+        box-shadow: none !important;
+      }
+    }
+  }
+}
+
+/* Nosotros home */
+.nosotros {
+  padding: 80px 0px;
+  text-align: center;
+
+  .nosotros-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    max-width: 1700px;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+.texto-nosotros {
+  font-family: $fuenteGeneral;
+  color: rgb(21, 21, 30);
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 25px auto;
+  font-size: 18px;
+}
+
+/*Cómo se hace  */
+.como-se-hace {
+  background-color: $colorFondoSuave;
+  padding: 60px 20px;
+  text-align: center;
+
+  .cuerpo-de-texto {
+    margin: 0 0 14px 0;
+    @include textoBase(16px, 600, center);
+  }
+
+  .etiquetas {
+    @include flexBase(center, center);
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 25px;
+
+    .etiqueta {
+      padding: 10px 18px;
+      border-radius: 999px;
+      color: $colorBase;
+      font-size: 16px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+  }
+}
+
+.etiqueta-roja {
+  background: $colorSeccionHero;
+  &::before { content: "📣"; }
+}
+.etiqueta-azul {
+  background: #004cff;
+  &::before { content: "💻"; }
+}
+.etiqueta-morada {
+  background: $colorTag;
+  &::before { content: "✨"; }
+}
+.etiqueta-naranja {
+  background: #ffad3b;
+  &::before { content: "💡"; }
+}
+
+@media (max-width: $mobile) {
+  .hero .hero-content .hero-title {
+    font-size: 28px;
+  }
+
+  .como-se-hace {
+    h2 {
+      font-size: 34px;
+    }
+
+    .texto-nosotros {
+      font-size: 16px;
+    }
+
+    .etiqueta {
+      font-size: 14px;
+      padding: 9px 14px;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+/* UTILITIES */
+@use "utilities/variables";
+@use "utilities/mixinx";
+
+/* BASE */
+@use "base/reset";
+@use "base/tipografias";
+
+/* LAYOUT */
+@use "layout/body";
+@use "layout/footer";
+@use "layout/header";
+
+/* COMPONENTES*/
+@use "components/botones";
+@use "components/carrusel";
+@use "components/galeria";
+@use "components/tags";
+
+/* PAGINAS */
+@use "paginas/contacto";
+@use "paginas/home";
+@use "paginas/nosotros";
+@use "paginas/proyectos";
+@use "paginas/servicios";
+
+
+

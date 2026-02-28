@@ -1,0 +1,32 @@
+@use '../utilities/mixinx' as *;
+@use '../utilities/variables' as *;
+
+
+
+
+.btn-primary {
+  background-color: $colorBtn;
+  border: 2px solid $colorBtn;
+  color: $colorBase;
+  font-weight: 600;
+  padding: 12px 28px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: $colorBtnHover;
+    border-color: $colorBtnHover;
+    color: $colorBase;
+  }
+
+  &:active {
+    background-color: $colorBtnActive !important;
+    border-color: $colorBtnActive !important;
+  }
+
+  &:focus,
+  &:focus-visible {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+}

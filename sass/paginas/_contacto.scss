@@ -1,0 +1,78 @@
+@use '../utilities/mixinx' as *;
+@use '../utilities/variables' as *;
+
+
+
+
+
+.container-form {
+  background-color: $colorFondoSuave;
+  padding: 80px 0px;
+}
+
+.contacto {
+  background-color: $colorBase;
+  padding: 70px 20px;
+  text-align: center;
+}
+
+.contenedor-contacto {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.titulo-contacto {
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 30px;
+  color: #1f1f1f;
+}
+
+.titulo-grande {
+  display: flex;
+  font-size: 56px;
+  font-weight: 700;
+  justify-content: center;
+  text-align: center;
+}
+
+.bloques-contacto {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+
+  .bloque-dato {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 20px 30px;
+    border-radius: 14px;
+    color: $colorBase;
+    min-width: 220px;
+    justify-content: center;
+
+    .icono { font-size: 22px; }
+
+    .texto-dato {
+      margin: 0;
+      font-size: 18px;
+      font-weight: 600;
+    }
+  }
+}
+
+.bloque-morado { background-color: $colorTag; }
+.bloque-rojo { background-color: $colorSeccionHero; }
+.bloque-naranja { background-color: #f2a23a; }
+
+@media (max-width: $mobile) {
+  .titulo-contacto { font-size: 28px; }
+  .titulo-grande { font-size: 52px; }
+
+  .bloque-dato {
+    width: 100%;
+    max-width: 350px;
+  }
+}

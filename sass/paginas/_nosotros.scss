@@ -1,0 +1,252 @@
+@use '../utilities/mixinx' as *;
+@use '../utilities/variables' as *;
+
+
+
+
+.hero-nosotros {
+  background-color: #d75300;
+  min-height: 70vh;
+  @include flexBase(center, center);
+  text-align: center;
+
+  .hero-nos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    max-width: 900px;
+    text-align: center;
+    padding: 0 20px;
+
+    .hero-tag-nos {
+      background: #085aff;
+      color: $colorBase;
+      padding: 6px 14px;
+      border-radius: 100px;
+      font-size: 14px;
+      display: inline-block;
+      font-weight: 600;
+    }
+
+    .hero-title {
+      color: $colorBase;
+      font-size: 42px;
+      line-height: 1.1;
+      margin: 0;
+      font-weight: 800;
+
+      .acento-color {
+        color: $colorAcento;
+        font-weight: 800;
+      }
+    }
+
+    .hero-subtitle {
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 16px;
+      margin: 0;
+      max-width: 720px;
+    }
+  }
+}
+
+.nosotros-historia {
+  padding: 80px 20px;
+  background-color: #f5f6fb;
+  margin: 80px 0px;
+
+  .historia-contenido {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    .historia-imagen {
+      flex: 1;
+      overflow: hidden; 
+
+      img {
+        width: 100%;
+        border-radius: 12px;
+        display: block;
+
+        transition: transform 0.35s ease;
+        transform: scale(1);
+
+        &:hover {
+          transform: scale(1.03);
+        }
+      }
+    }
+
+    .historia-texto {
+      flex: 1;
+      text-align: left;
+
+      .historia-titulo {
+        font-size: 36px;
+        margin-bottom: 20px;
+        color: #1f2a6d;
+        font-weight: 400;
+        text-align: left;
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 1.6;
+        margin: 0 0 22px 0;
+        color: $colorTextoSuave;
+        font-weight: 400;
+      }
+
+      .nosotros-btn {
+        display: inline-block;
+      }
+    }
+  }
+}
+
+.seccion-frase-nosotros {
+  background: $colorBase;
+  margin: 150px 0px;
+
+  .frase-contenedor-nosotros {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 0 20px;
+
+    .frase-imagen-nosotros {
+      overflow: hidden;
+
+      img {
+        width: 140px;
+        display: block;
+
+        transition: transform 0.35s ease;
+        transform: scale(1);
+
+        &:hover {
+          transform: scale(1.06);
+        }
+      }
+    }
+
+    .frase-texto-nosotros {
+      h2 {
+        font-size: 42px;
+        font-weight: 700;
+        text-align: center;
+        margin: 0;
+        color: $colorTexto;
+        padding: 5px 10px;
+      }
+    }
+  }
+}
+
+.nosotros-historia-2 {
+  padding: 80px 20px;
+  background-color: #f5f6fb;
+  margin: 80px 0px;
+
+  .historia-contenido-2 {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-direction: row-reverse;
+
+    .historia-imagen-2 {
+      flex: 1;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        border-radius: 12px;
+        display: block;
+
+        transition: transform 0.35s ease;
+        transform: scale(1);
+
+        &:hover {
+          transform: scale(1.03);
+        }
+      }
+    }
+
+    .historia-texto-2 {
+      flex: 1;
+      text-align: right;
+
+      .historia-titulo-2 {
+        font-size: 36px;
+        margin-bottom: 20px;
+        color: #1f2a6d;
+        text-align: right;
+        font-weight: 400;
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 1.6;
+        margin: 0 0 22px 0;
+        color: $colorTextoSuave;
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+@media (max-width: $mobile) {
+  .hero-nosotros {
+    .hero-nos {
+      .hero-title {
+        font-size: 34px;
+      }
+    }
+  }
+
+  .nosotros-historia {
+    padding: 60px 20px;
+
+    .historia-contenido {
+      flex-direction: column;
+      gap: 30px;
+
+      .historia-texto {
+        text-align: center;
+
+        .historia-titulo {
+          text-align: center;
+          font-size: 28px;
+        }
+      }
+    }
+  }
+
+  .nosotros-historia-2 {
+    padding: 60px 20px;
+
+    .historia-contenido-2 {
+      flex-direction: column;
+      gap: 30px;
+
+      .historia-texto-2 {
+        text-align: center;
+
+        .historia-titulo-2 {
+          text-align: center;
+          font-size: 28px;
+        }
+      }
+    }
+  }
+}
